@@ -51,6 +51,9 @@ def data_constructor(filepath, classes , dim_size ,index  ,bboxes , interpolatio
         x= x/255
     return x , y 
 def phase1_labels_updater(dense_y):
+    """
+    Updates labels for Phase-1 testing
+    """
     for i in range(len(dense_y)):
         if dense_y[i] == 2:
             dense_y[i] =1 
@@ -58,6 +61,9 @@ def phase1_labels_updater(dense_y):
             dense_y[i] = 0 
     return dense_y    
 def index_extractor(y_preds, y_test,  test_index ,classes_test):
+    """
+    Extracts indexs of all the Original classes and Predicted classes by Phase-1 Model 
+    """
     yclass_0 = np.where(y_preds==0)[0]
     yclass_1 = np.where(y_preds==1)[0]
     class_0 = np.where(y_test==0)[0]
@@ -82,6 +88,7 @@ def plot_confusion_matrix(cm, classes,normalize=False,title='Confusion matrix',c
     """
       This function prints and plots the confusion matrix.
     """
+    print(cm)
     plt.imshow(cm, interpolation='nearest', cmap=cmap)
     plt.title(title)
     plt.colorbar()
