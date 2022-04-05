@@ -4,6 +4,8 @@ Official Repository for <b>A Novel Approach for detecting Normal, COVID-19 and P
 Link to paper - [Click here](https://www.sciencedirect.com/science/article/pii/S2772528622000310)
 
 
+Link to dataset - [Click here](https://www.kaggle.com/datasets/hgunraj/covidxct)
+
 ### Workflow of Phase -1 : 
 <p align="center"><img src="images/phase-1.jpg" height = "250" width="800"></p>
 
